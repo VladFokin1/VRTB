@@ -7062,7 +7062,7 @@ MonoBehaviour:
     trackingRotationOffset: {x: 0, y: 0, z: 0}
   leftHand:
     vrTarget: {fileID: 2123482059}
-    ikTarget: {fileID: 1789698614}
+    ikTarget: {fileID: 659122656}
     trackingPositionOffset: {x: 0, y: 0, z: 0}
     trackingRotationOffset: {x: 0, y: 0, z: 0}
   rightHand:
@@ -19433,6 +19433,9 @@ MonoBehaviour:
   _isBroken: 0
   _rotationSpeed: 100
   _rotateAround: 4
+  _socket1: {fileID: 0}
+  _socket2: {fileID: 0}
+  _taskManager: {fileID: 0}
 --- !u!1 &4206993974739379654
 GameObject:
   m_ObjectHideFlags: 0
@@ -20536,6 +20539,9 @@ MonoBehaviour:
   _isBroken: 0
   _rotationSpeed: 110
   _rotateAround: 2
+  _socket1: {fileID: 1177430640}
+  _socket2: {fileID: 673574764}
+  _taskManager: {fileID: 1403041460}
 --- !u!82 &5957575536355691906
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20709,6 +20715,9 @@ MonoBehaviour:
   _isBroken: 0
   _rotationSpeed: 110
   _rotateAround: 2
+  _socket1: {fileID: 637617085}
+  _socket2: {fileID: 2126747217}
+  _taskManager: {fileID: 1403041460}
 --- !u!82 &6022783943236098974
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21467,6 +21476,9 @@ MonoBehaviour:
   _isBroken: 0
   _rotationSpeed: 110
   _rotateAround: 2
+  _socket1: {fileID: 278505465}
+  _socket2: {fileID: 278093809}
+  _taskManager: {fileID: 1403041460}
 --- !u!82 &6991477303538688413
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22382,6 +22394,9 @@ MonoBehaviour:
   _isBroken: 0
   _rotationSpeed: 110
   _rotateAround: 2
+  _socket1: {fileID: 2090870845}
+  _socket2: {fileID: 1846085835}
+  _taskManager: {fileID: 1403041460}
 --- !u!82 &8168616827079081315
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22563,6 +22578,9 @@ MonoBehaviour:
   _isBroken: 0
   _rotationSpeed: 110
   _rotateAround: 2
+  _socket1: {fileID: 2122502745}
+  _socket2: {fileID: 1757395601}
+  _taskManager: {fileID: 1403041460}
 --- !u!82 &8221079501512214069
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23218,6 +23236,9 @@ MonoBehaviour:
   _isBroken: 0
   _rotationSpeed: 100
   _rotateAround: 4
+  _socket1: {fileID: 0}
+  _socket2: {fileID: 0}
+  _taskManager: {fileID: 0}
 --- !u!4 &8934206287597862140
 Transform:
   m_ObjectHideFlags: 0
