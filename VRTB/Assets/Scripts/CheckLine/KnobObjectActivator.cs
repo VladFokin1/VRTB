@@ -5,6 +5,7 @@ public class KnobObjectActivator : MonoBehaviour
 {
     [Header("Knob объект")]
     public Transform knobTransform;
+    public RollsManager manager;
 
     [Header("Порог активации")]
     [Tooltip("Насколько близко к 180° нужно повернуть, чтобы активировать")]
@@ -31,6 +32,9 @@ public class KnobObjectActivator : MonoBehaviour
         foreach (var button in vrButtons)
             if (button != null)
                 button.enabled = shouldActivate;
+        if (!shouldActivate) {
+            manager.Disable();
+        }
     }
 
     // Возвращает угол в диапазоне [0, 360]

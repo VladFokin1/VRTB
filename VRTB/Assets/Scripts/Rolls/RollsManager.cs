@@ -5,7 +5,7 @@ public class RollsManager : MonoBehaviour
     [SerializeField] private RollController[] _rolls;
     [SerializeField] private Animator _beltAnim;
     [SerializeField] private AudioSource _beltAudio;
-    [SerializeField] private bool _isEnabled = false;
+    [SerializeField] public bool _isEnabled = false;
 
     
 
@@ -42,14 +42,6 @@ public class RollsManager : MonoBehaviour
     {
         if (_isEnabled)
         {
-            #region Delete later
-            
-
-            if (!_beltAudio.isPlaying)
-            {
-                _beltAudio.Play();
-            }
-            #endregion
             foreach (RollController roll in _rolls)
             {
                 roll.Rotate();
