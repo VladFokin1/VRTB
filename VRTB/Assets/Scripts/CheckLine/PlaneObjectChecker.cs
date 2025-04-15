@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class PlaneObjectChecker : MonoBehaviour
 {
     public Collider planeArea;           // Коллайдер плоскости
-    public Toggle targetToggle;          // Тоггл для обновления
+    public TaskManager taskManager;
     public float checkHeight = 10f;      // Высота вверх от плоскости, в которой ищем объекты
     public LayerMask objectLayerMask;    // Слои объектов, которые нужно учитывать
 
@@ -23,7 +23,7 @@ public class PlaneObjectChecker : MonoBehaviour
         Collider[] hits = Physics.OverlapBox(boxCenter, boxSize / 2f, Quaternion.identity, objectLayerMask);
 
         // true — если ничего нет над плоскостью
-        targetToggle.isOn = hits.Length == 0;
+        taskManager.MarkTask(0, hits.Length == 0);
     }
 
     void OnDrawGizmosSelected()

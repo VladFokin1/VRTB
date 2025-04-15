@@ -49,7 +49,12 @@ public class RollController : MonoBehaviour
 
     public void PlayAudio()
     {
-        if (_isBroken) _audio.Play();
+        if (_isBroken)
+        {
+            if (!_audio.isPlaying)
+                _audio.Play();
+        }
+        
     }
 
     public enum Axis {
