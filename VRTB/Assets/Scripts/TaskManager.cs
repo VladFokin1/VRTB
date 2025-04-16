@@ -6,6 +6,8 @@ public class TaskManager : MonoBehaviour
 {
     private Dictionary<int, bool> _tasks;
     [SerializeField] private Toggle[] _taskCheckboxes = new Toggle[3];
+    [SerializeField] private AudioSource _winSound;
+    [SerializeField] private GameObject _winText;
 
     private void Start()
     {
@@ -21,6 +23,18 @@ public class TaskManager : MonoBehaviour
     {
         _tasks[number] = isCompleted;
         _taskCheckboxes[number].isOn = isCompleted;
+
+    }
+
+    public void Win()
+    {
+         _winSound.Play();
+         _winText.SetActive(true);
+    }
+
+    public bool CheckThirdAllowed()
+    {
+        return _tasks[0] && _tasks[1];
     }
 
 }

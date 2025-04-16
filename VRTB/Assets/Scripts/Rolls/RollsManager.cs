@@ -6,36 +6,44 @@ public class RollsManager : MonoBehaviour
     [SerializeField] private Animator _beltAnim;
     [SerializeField] private AudioSource _beltAudio;
     [SerializeField] public bool _isEnabled = false;
+    [SerializeField] public TaskManager _taskManager;
+    public AudioSource errorSound;
 
     
 
     private void Awake()
     {
-
-
             int randIndex = Random.Range(0, 4);
             Debug.Log(randIndex);
             _rolls[randIndex].Break();
-  
     }
 
-    private void Start()
-    {
-        _beltAnim.SetTrigger("Enable");
-    }
 
     public void Enable()
     {
-        _isEnabled = true;
-        _beltAnim.SetTrigger("Enable");
-        _beltAudio.Play();
+        if (_taskManager.CheckThirdAllowed())
+        {
+            if (!_isEnabled)
+            {
+                _isEnabled = true;
+                _beltAnim.SetTrigger("Enable");
+                _beltAudio.Play();
+            }
+
+        }
+        else
+        {
+            errorSound.Play();
+        }
     }
     public void Disable()
     {
-        _isEnabled = false;
-        _beltAnim.SetTrigger("Disable");
-        _beltAudio.Stop();
-
+        if (_isEnabled)
+        {
+            _isEnabled = false;
+            _beltAnim.SetTrigger("Disable");
+            _beltAudio.Stop();
+        }
     }
 
     private void Update()

@@ -35,14 +35,12 @@ public class RollController : MonoBehaviour
         if (_isBroken)
         {
             _taskManager.MarkTask(2, true);
+            _taskManager.Win();
         }
     }
     private void FlagRemoved(SelectExitEventArgs args)
     {
-        if (_isBroken)
-        {
-            _taskManager.MarkTask(2, false);
-        }
+
     }
 
     public void Break()

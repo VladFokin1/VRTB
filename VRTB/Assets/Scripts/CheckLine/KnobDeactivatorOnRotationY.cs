@@ -13,8 +13,8 @@ public class KnobDeactivatorOnRotationY : MonoBehaviour
     [Header("XR Knob (скрипт, который нужно отключить)")]
     public MonoBehaviour xrKnobScript; // можно использовать XRKnob, если ты знаешь точный тип
 
-    [Header("Toggle, который включается")]
-    public Toggle targetToggle;
+    
+    public TaskManager manager;
 
     private bool hasTriggered = false;
 
@@ -32,9 +32,9 @@ public class KnobDeactivatorOnRotationY : MonoBehaviour
                 Debug.Log("XR Knob отключён");
             }
 
-            if (targetToggle != null)
+            if (manager != null)
             {
-                targetToggle.isOn = true;
+                manager.MarkTask(1, true);
                 Debug.Log("Toggle включён");
             }
 
